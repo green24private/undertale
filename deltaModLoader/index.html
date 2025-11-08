@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 
@@ -7,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DELTARUNEWeb Mod Loader!</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="x-icon" href="/verif/patch.png">
+    <link rel="icon" type="x-icon" href="/patch.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <base href="https://green24private.github.io/undertale/deltaModLoader/">
     <style>
         @font-face {
             font-family: "Determination";
@@ -31,7 +31,7 @@
 <body class="bg-gray-100 dark:bg-gray-900 flex items-center justify-center min-h-screen">
     <div class="w-full max-w-lg mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 transition-all duration-300">
         <div class="text-center">
-            <img src="/verif/patch.png" class="mx-auto h-12 w-12" />
+            <img src="/patch.png" class="mx-auto h-12 w-12" />
             <h1 class="text-2xl font-bold text-gray-800 dark:text-white mt-4">
                 DELTARUNEWeb Mod Loader!
             </h1>
@@ -68,7 +68,7 @@
 
             <div id="drop-zone" class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg text-center cursor-pointer hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300 p-6">
                 <input type="file" id="patchFile" accept=".xdelta" class="hidden" required />
-                <img src="/verif/upload.png" class="mx-auto h-12 w-12" />
+                <img src="/upload.png" class="mx-auto h-12 w-12" />
                 <p class="mt-4 text-sm text-gray-500 dark:text-gray-400">
                     <span class="font-semibold text-blue-600 dark:text-blue-400">Click to upload</span>
                     or drag & drop
@@ -96,7 +96,7 @@
         function updateDropZoneDisplay(file) {
             fileNameText.innerHTML = `<span class="text-lg font-bold text-blue-600 dark:text-blue-400">${file.name}</span>`;
             fileHintText.textContent = ".xdelta patch file selected!";
-            uploadImg.src = "/verif/good.png";
+            uploadImg.src = "/good.png";
         }
         dropZone.addEventListener("click", () => patchFile.click());
         dropZone.addEventListener("dragover", (e) => {
