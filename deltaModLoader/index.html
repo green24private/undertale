@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DELTARUNEWeb Mod Loader!</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="x-icon" href="/patch.png">
+    <link rel="icon" type="x-icon" href="patch.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <base href="https://green24private.github.io/undertale/deltaModLoader/">
     <style>
         @font-face {
             font-family: "Determination";
-            src: url("/8bitOperatorPlus-Bold.ttf") format("truetype");
+            src: url("8bitOperatorPlus-Bold.ttf") format("truetype");
             font-weight: normal;
             font-style: normal;
         }
@@ -31,7 +30,7 @@
 <body class="bg-gray-100 dark:bg-gray-900 flex items-center justify-center min-h-screen">
     <div class="w-full max-w-lg mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 transition-all duration-300">
         <div class="text-center">
-            <img src="/patch.png" class="mx-auto h-12 w-12" />
+            <img src="patch.png" class="mx-auto h-12 w-12" />
             <h1 class="text-2xl font-bold text-gray-800 dark:text-white mt-4">
                 DELTARUNEWeb Mod Loader!
             </h1>
@@ -68,7 +67,7 @@
 
             <div id="drop-zone" class="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg text-center cursor-pointer hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300 p-6">
                 <input type="file" id="patchFile" accept=".xdelta" class="hidden" required />
-                <img src="/upload.png" class="mx-auto h-12 w-12" />
+                <img src="upload.png" class="mx-auto h-12 w-12" />
                 <p class="mt-4 text-sm text-gray-500 dark:text-gray-400">
                     <span class="font-semibold text-blue-600 dark:text-blue-400">Click to upload</span>
                     or drag & drop
@@ -96,7 +95,7 @@
         function updateDropZoneDisplay(file) {
             fileNameText.innerHTML = `<span class="text-lg font-bold text-blue-600 dark:text-blue-400">${file.name}</span>`;
             fileHintText.textContent = ".xdelta patch file selected!";
-            uploadImg.src = "/good.png";
+            uploadImg.src = "good.png";
         }
         dropZone.addEventListener("click", () => patchFile.click());
         dropZone.addEventListener("dragover", (e) => {
@@ -287,7 +286,7 @@
                 }
             });
     </script>
-    <script src="/verif.js"></script>
+    <script src="verif.js"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"2a95fe4032ac410e9e23ff5c9d15b6fe","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 
