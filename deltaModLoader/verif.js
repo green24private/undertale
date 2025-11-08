@@ -1,7 +1,7 @@
  (async () => {
      'use strict';
 
-     const VERIFICATION_PAGE_URL = '/verif.html';
+     const VERIFICATION_PAGE_URL = 'verif.html';
 
      function getPrivateKeyFromVault() {
          return new Promise((resolve, reject) => {
