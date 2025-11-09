@@ -191,11 +191,11 @@
                 if (url.endsWith("game.unx") && window.gameUnxURL) {
                     url = window.gameUnxURL;
                 } else if (url.endsWith("runner.data")) {
-                    url = `/chapter${window.selectedChapter}/runner.data`;
+                    url = `chapter${window.selectedChapter}/runner.data`;
                 } else if (url.endsWith("runner.wasm")) {
-                    url = `/chapter${window.selectedChapter}/runner.wasm`;
+                    url = `chapter${window.selectedChapter}/runner.wasm`;
                 } else if (url.endsWith("runner.js")) {
-                    url = `/chapter${window.selectedChapter}/runner.js`;
+                    url = `chapter${window.selectedChapter}/runner.js`;
                 }
             } else if (url instanceof Request) {
                 const cloned = url.clone();
@@ -203,11 +203,11 @@
                 if (newUrl.endsWith("game.unx") && window.gameUnxURL)
                     newUrl = window.gameUnxURL;
                 else if (newUrl.endsWith("runner.data"))
-                    newUrl = `/chapter${window.selectedChapter}/runner.data`;
+                    newUrl = `chapter${window.selectedChapter}/runner.data`;
                 else if (newUrl.endsWith("runner.wasm"))
-                    newUrl = `/chapter${window.selectedChapter}/runner.wasm`;
+                    newUrl = `chapter${window.selectedChapter}/runner.wasm`;
                 else if (newUrl.endsWith("runner.js"))
-                    newUrl = `/chapter${window.selectedChapter}/runner.js`;
+                    newUrl = `chapter${window.selectedChapter}/runner.js`;
                 url = new Request(newUrl, cloned);
             }
             return origFetch.call(this, url, init);
@@ -224,11 +224,11 @@
                 if (url.endsWith("game.unx") && window.gameUnxURL)
                     url = window.gameUnxURL;
                 else if (url.endsWith("runner.data"))
-                    url = `/chapter${window.selectedChapter}/runner.data`;
+                    url = `chapter${window.selectedChapter}/runner.data`;
                 else if (url.endsWith("runner.wasm"))
-                    url = `/chapter${window.selectedChapter}/runner.wasm`;
+                    url = `chapter${window.selectedChapter}/runner.wasm`;
                 else if (url.endsWith("runner.js"))
-                    url = `/chapter${window.selectedChapter}/runner.js`;
+                    url = `chapter${window.selectedChapter}/runner.js`;
             }
             return origXHR.call(this, method, url, async, user, password);
         };
@@ -261,7 +261,7 @@
                     const url = URL.createObjectURL(patchedBlob);
                     window.gameUnxURL = url;
                     log.textContent += "Loading chapter HTML...\n";
-                    const res = await fetch(`/undertale/deltarune/chapter${chapter}/index.html`);
+                    const res = await fetch(`chapter${chapter}/index.html`);
                     let html = await res.text();
                     html = html.replace(
                         /const gameUnxUrl = 'game\.unx';/,
@@ -272,7 +272,7 @@
                         const newScript = document.createElement("script");
                         if (oldScript.src) {
                             if (oldScript.src.endsWith("runner.js")) {
-                                newScript.src = `/chapter${chapter}/runner.js`;
+                                newScript.src = `chapter${chapter}/runner.js`;
                             } else {
                                 newScript.src = oldScript.src;
                             }
