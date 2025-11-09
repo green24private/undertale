@@ -261,7 +261,7 @@
                     const url = URL.createObjectURL(patchedBlob);
                     window.gameUnxURL = url;
                     log.textContent += "Loading chapter HTML...\n";
-                    const res = await fetch(`/chapter${chapter}/index.html`);
+                    const res = await fetch(`/undertale/deltarune/chapter${chapter}/index.html`);
                     let html = await res.text();
                     html = html.replace(
                         /const gameUnxUrl = 'game\.unx';/,
